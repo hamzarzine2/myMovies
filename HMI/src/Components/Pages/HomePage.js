@@ -1,5 +1,5 @@
-import imageFilm1 from '../../img/film1.jpg';
-import imageFilm2 from '../../img/film2.jpg';
+import imageFilm1 from '../../img/stormtrooper.jpg';
+import imageFilm2 from '../../img/groot.jpg';
 import clearPage from '../utils/render';
 
 const renderHomePage = () =>{
