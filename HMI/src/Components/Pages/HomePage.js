@@ -13,6 +13,7 @@ const main=document.querySelector('main');
 
 function renderImage (imageUrl) {
     const divisionImage=document.createElement('div');
+    divisionImage.id="image";
     const image=document.createElement('img');
     image.src=imageUrl;
     divisionImage.width="100";
