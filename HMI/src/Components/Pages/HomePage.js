@@ -15,6 +15,8 @@ function renderImage (imageUrl) {
     const divisionImage=document.createElement('div');
     const image=document.createElement('img');
     image.src=imageUrl;
+    image.width="100";
+    image.height="100";
     main.appendChild(divisionImage);
     divisionImage.appendChild(image);
 }
