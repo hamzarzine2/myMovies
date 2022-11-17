@@ -1,13 +1,12 @@
 /* eslint-disable no-unused-vars */
+import { Navbar as BootstrapNavbar } from 'bootstrap';
 import { isAuthenticated,getAuthenticatedUser } from "../../utils/auths";
 
 const header=document.querySelector("header")
 
 
 function navbar( ){
-  const div=document.createElement("div");
-  div.id='navbarWrapper'
-  header.appendChild(div)
+
   const user=getAuthenticatedUser();
 
   const navbarNotLog=`
@@ -19,16 +18,16 @@ function navbar( ){
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" href="#" data-url ="/">Home</a>
+            <a class="nav-link" href="#" data-uri ="/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" data-url ="/viewMovie">viewMovie</a>
+            <a class="nav-link" href="#" data-uri ="/viewMovie">viewMovie</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" data-url ="/login">login</a>
+            <a class="nav-link" href="#" data-uri ="/login">login</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" data-url ="/register">register</a>
+            <a class="nav-link" href="#" data-uri ="/register">register</a>
           </li>
         </ul>
       </div>
@@ -43,16 +42,16 @@ function navbar( ){
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" href="#" data-url ="/">Home</a>
+            <a class="nav-link" href="#" data-uri ="/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" data-url ="/viewMovie">viewMovie</a>
+            <a class="nav-link" href="#" data-uri ="/viewMovie">viewMovie</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#" data-url ="/addMovie">addMovie</a>
+            <a class="nav-link" href="#" data-uri ="/addMovie">addMovie</a>
           </li>
           <li class="nav-item">
-          <a class="nav-link" href="#" data-url ="/logout">logout</a>
+          <a class="nav-link" href="#" data-uri ="/logout">logout</a>
         </li>
         
         </ul>

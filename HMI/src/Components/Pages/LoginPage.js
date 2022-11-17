@@ -1,5 +1,5 @@
 import { setAuthenticatedUser, setRememberMe } from '../../utils/auths';
-import clearPage from '../../utils/render';
+import {clearPage} from '../../utils/render';
 import navigate from '../Router/Navigate';
 import navbar from '../Navbar/Navbar';
 

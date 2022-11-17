@@ -1,4 +1,4 @@
-import clearPage from '../../utils/render';
+import {clearPage} from '../../utils/render';
 // eslint-disable-next-line no-unused-vars
 import navigate from '../Router/Navigate';
 import { getAuthenticatedUser, isAuthenticated } from '../../utils/auths';
