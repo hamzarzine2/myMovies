@@ -47,7 +47,7 @@ async function addfilm(e) {
     },
   };
   try {
-    const response = await fetch('/api/films', options);
+    const response = await fetch(`${process.env.API_BASE_URL}/films`, options);
 
     if (!response.ok) throw new Error(`fetch error : ${response.status} : ${response.statusText}`);
 

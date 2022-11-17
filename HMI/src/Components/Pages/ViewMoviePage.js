@@ -9,7 +9,7 @@ const main = document.querySelector('main');
 const renderViewPage = async () => {
   try {
     clearPage();
-    const response = await fetch('/api/films');
+    const response = await fetch(`${process.env.API_BASE_URL}/films`);
     if (!response.ok) throw new Error(`fetch error : ${response.status} : ${response.statusText}`);
     const filmJson = await response.json();
     renderTable(filmJson);
@@ -123,7 +123,7 @@ async function deleteId(e){
         authorization: user.token,
       }
     }
-    const response= await fetch(`api/films/${idFilm}`,options);
+    const response= await fetch(`${process.env.API_BASE_URL}/films/${idFilm}`,options);
 
     await response.json();
     renderViewPage();
@@ -163,7 +163,7 @@ async function updateRow(e){
 
       },
     };
-    const response=await fetch(`api/films/${idUpdate}`,options);
+    const response=await fetch(`${process.env.API_BASE_URL}/films/${idUpdate}`,options);
     if (!response.ok) throw new Error(`fetch error : ${response.status} : ${response.statusText}`);
     await response.json();
     renderViewPage();
