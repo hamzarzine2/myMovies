@@ -1,4 +1,9 @@
 #image{
-    width:5px;
-    height: 5px;
+    width:10%;
+    height:10%;
+}
+
+#image img{
+    width: 20%;
+    height: 20%;
 }
