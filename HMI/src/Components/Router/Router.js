@@ -1,8 +1,8 @@
 import renderAddMoviePage from "../Pages/AddMoviePage";
 import renderHomePage from "../Pages/HomePage";
 import renderViewPage from "../Pages/ViewMoviePage";
-import renderLoginPage from "../Pages/Login";
-import renderRegisterPage from "../Pages/Register";
+import renderLoginPage from "../Pages/LoginPage";
+import renderRegisterPage from "../Pages/RegisterPage";
 import logout from "../Logout/Logout";
 
 const routes ={
