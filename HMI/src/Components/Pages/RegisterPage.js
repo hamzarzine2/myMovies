@@ -1,7 +1,7 @@
 import navbar from '../Navbar/Navbar';
 import navigate from '../Router/Navigate';
-import { setAuthenticatedUser } from '../utils/auths';
-import clearPage from '../utils/render';
+import { setAuthenticatedUser } from '../../utils/auths';
+import clearPage from '../../utils/render';
 
 const renderRegisterPage = () => {
   clearPage();

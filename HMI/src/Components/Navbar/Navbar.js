@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { isAuthenticated,getUserSessionData } from "../utils/auths";
+import { isAuthenticated,getAuthenticatedUser } from "../../utils/auths";
 
 const header=document.querySelector("header")
 
@@ -8,7 +8,7 @@ function navbar( ){
   const div=document.createElement("div");
   div.id='navbarWrapper'
   header.appendChild(div)
-  const user=getUserSessionData();
+  const user=getAuthenticatedUser();
 
   const navbarNotLog=`
     <nav class="navbar navbar-expand-lg navbar-light bg-light">

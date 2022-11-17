@@ -1,4 +1,4 @@
-import clearPage from '../utils/render';
+import clearPage from '../../utils/render';
 import navigate from '../Router/Navigate';
 
 const main = document.querySelector('main');

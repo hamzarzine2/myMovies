@@ -1,6 +1,6 @@
 import imageFilm1 from '../../img/stormtrooper.jpg';
 import imageFilm2 from '../../img/groot.jpg';
-import clearPage from '../utils/render';
+import clearPage from '../../utils/render';
 
 const renderHomePage = () =>{
     clearPage();

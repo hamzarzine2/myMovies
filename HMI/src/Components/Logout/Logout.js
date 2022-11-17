@@ -1,6 +1,6 @@
 import navbar from "../Navbar/Navbar";
 import navigate from "../Router/Navigate";
-import { clearAuthenticatedUser } from "../utils/auths"
+import { clearAuthenticatedUser } from "../../utils/auths"
 
 const logout=()=>{
     clearAuthenticatedUser();

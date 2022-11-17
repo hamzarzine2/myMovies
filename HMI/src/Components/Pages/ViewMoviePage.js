@@ -1,7 +1,7 @@
-import clearPage from '../utils/render';
+import clearPage from '../../utils/render';
 // eslint-disable-next-line no-unused-vars
 import navigate from '../Router/Navigate';
-import { getUserSessionData, isAuthenticated } from '../utils/auths';
+import { getAuthenticatedUser, isAuthenticated } from '../../utils/auths';
 
 const main = document.querySelector('main');
 
@@ -115,7 +115,7 @@ async function deleteId(e){
   e.preventDefault();
   // eslint-disable-next-line no-unused-vars
   const idFilm=e.target.children[0].dataset.id;
-  const user = getUserSessionData();
+  const user = getAuthenticatedUser();
   try {
     const options={
       method: 'delete',
@@ -146,7 +146,7 @@ async function updateRow(e){
   
   const budget=parentElement.children[3].innerHTML;
   const duration=parentElement.children[2].innerHTML;
-  const user=getUserSessionData();
+  const user=getAuthenticatedUser();
 
   try {
     const options={

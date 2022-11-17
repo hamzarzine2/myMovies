@@ -1,5 +1,5 @@
-import { setAuthenticatedUser, setUserCookies } from '../utils/auths';
-import clearPage from '../utils/render';
+import { setAuthenticatedUser, setRememberMe } from '../../utils/auths';
+import clearPage from '../../utils/render';
 import navigate from '../Router/Navigate';
 import navbar from '../Navbar/Navbar';
 
@@ -50,7 +50,7 @@ async function login(e) {
     if (remember) {
       setAuthenticatedUser(user);
     } else {
-      setUserCookies(user);
+      setRememberMe(user);
     }
   } catch (error) {
     console.error(error);
