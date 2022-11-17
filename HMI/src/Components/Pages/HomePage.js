@@ -13,11 +13,9 @@ const main=document.querySelector('main');
 
 function renderImage (imageUrl) {
     const divisionImage=document.createElement('div');
-    divisionImage.id="image";
+    divisionImage.id='image';
     const image=document.createElement('img');
     image.src=imageUrl;
-    divisionImage.width="100";
-    divisionImage.height="100";
     main.appendChild(divisionImage);
     divisionImage.appendChild(image);
 }
