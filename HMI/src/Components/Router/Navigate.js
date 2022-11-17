@@ -1,11 +1,20 @@
-const navigate = (toUrl)=>{
-    const fromUrl=window.location.pathname;
-    if(toUrl===fromUrl) return;
+/**
+ * Navigate to a URI by triggering the popstate event in order for the router to deal with
+ * a change of browser history.
+ * NB : this solution is to avoid circular depedencies : if Navigate() had to import, directly or
+ * indirectly, the pages, then there would be a circular reference because the router
+ * has to import all the pages to render them.
+ */
 
-    window.history.pushState({},'',toUrl)
-    const popstateEvent=new PopStateEvent('popstate',{})
-    dispatchEvent(popstateEvent);
-}
+ import { usePathPrefix } from '../../utils/path-prefix';
 
-
-export default navigate;
+ const Navigate = (toUri) => {
+   const fromUri = window.location.pathname;
+   if (fromUri === toUri) return;
+ 
+   window.history.pushState({}, '', usePathPrefix(toUri));
+   const popStateEvent = new PopStateEvent('popstate', { state: {} });
+   dispatchEvent(popStateEvent);
+ };
+ 
+ export default Navigate;

@@ -1,13 +1,16 @@
-import HomePage from '../Pages/HomePage';
-import Logout from '../Logout/Logout';
-import LoginPage from '../Pages/LoginPage';
-import RegisterPage from '../Pages/RegisterPage';
+import renderAddMoviePage from "../Pages/AddMoviePage";
+import renderHomePage from "../Pages/HomePage";
+import renderViewPage from "../Pages/ViewMoviePage";
+import renderLoginPage from "../Pages/LoginPage";
+import renderRegisterPage from "../Pages/RegisterPage";
+import logout from "../Logout/Logout";
 
-const routes = {
-  '/': HomePage,
-  '/login': LoginPage,
-  '/register': RegisterPage,
-  '/logout': Logout,
-};
-
+const routes ={
+    '/': renderHomePage,
+    '/addMovie': renderAddMoviePage,
+    '/viewMovie':renderViewPage,
+    '/login':renderLoginPage,
+    '/register':renderRegisterPage,
+    '/logout':logout,
+}
 export default routes;
