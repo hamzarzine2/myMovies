@@ -13,7 +13,7 @@ const app = express();
 
 
 const corsOptions = {
-  origin: ['http://localhost:8080', 'https://hamzarzine2.github.io/myMovies']
+  origin: ['http://localhost:8080', 'https://hamzarzine2.github.io']
 };
 
 const expiryDateIn3Months = new Date(Date.now() + 1000 * 60 * 60 * 24 * 30 * 3);
